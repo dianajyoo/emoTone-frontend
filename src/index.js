@@ -26,8 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(res => res.json())
       .then(json => {
         console.log(json)
-        // debugger
-        for (let i = 0; i < 8; i++){
+
+        // clear figcaption content after new form is submitted
+        for (let i = 0; i < 8; i++) {
           if (figcaption[i].innerHTML !== "") {
             json.forEach(inputObject => {
               for (let i = 0; i < 8; i++) {
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
 
+        // add tone score based on input text
         json.forEach(inputObject => {
           if (inputObject.text === text) {
             for (let i = 0; i < 8; i++) {
