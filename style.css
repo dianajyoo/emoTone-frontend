@@ -34,41 +34,45 @@ body, html {
 }
 
 figcaption {
-  font-family: monospace;
+  font-family: "LogicoSansRegular";
+  font-weight: bold;
 }
 
-
-
-
-
-
-
-/* input[type=text], select {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 12px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
+/* fonts */
+@font-face {
+  font-family: "moderna";
+  src: url(fonts/moderna.ttf) format("truetype");
 }
 
-input[type=submit] {
-    width: 50%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
+@font-face {
+  font-family: "LogicoSansRegular";
+  src: url(fonts/LogicoSansRegular.ttf) format("truetype");
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-} */
+/* title and description styling */
+.emotone {
+  position: absolute;
+  bottom: 65%;
+  left: 10%;
+  background: transparent;
+  margin: 0;
+  font-family: "moderna";
+  color: white;
+  font-weight: bold;
+  font-size: 160px;
+}
+
+.description {
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+  background: transparent;
+  margin: 0;
+  font-family: "LogicoSansRegular";
+  color: white;
+  font-weight: normal;
+  font-size: 25px;
+}
 
 h3 {
   text-align: center;
@@ -85,7 +89,3 @@ div {
 .submit-btn {
   color: #fff
 }
-
-/* body {
-  background-color:
-} */

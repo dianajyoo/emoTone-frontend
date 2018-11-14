@@ -1,4 +1,5 @@
 const INPUT_URL = "http://localhost:3000/text_inputs"
+const figcaption = document.querySelectorAll('figcaption')
 let text
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,12 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then( json => {
 
-      // for (let i = 0; i < json['document_tone']['tones'].length; i++) {
-      //   console.log(json['document_tone']['tones'][i])
-      // }
       fetch(INPUT_URL)
       .then(res => res.json())
-      .then(console.log)
+      .then(json => {
+        console.log(json)
+        // debugger
+        for (let i = 0; i < 8; i++){
+          if (figcaption[i].innerHTML !== "") {
+            json.forEach(inputObject => {
+              for (let i = 0; i < 8; i++) {
+                figcaption[i].innerHTML = ""
+              }
+            })
+          }
+        }
+
+        json.forEach(inputObject => {
+          if (inputObject.text === text) {
+            for (let i = 0; i < 8; i++) {
+              if (figcaption[i].id === inputObject.tone) {
+                figcaption[i].innerHTML += `${inputObject.tone} ${inputObject.score}%`
+              }
+            }
+          }
+        })
+
+        // reset the form field
+        // event.target.reset()
+
+      })
     })
   })
 
