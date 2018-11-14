@@ -3,22 +3,36 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css"/>
     <title></title>
   </head>
   <body>
+
+    <div class="bg"></div>
 
     <h3>Text Analyzer</h3>
 
     <div class="input-group">
       <!-- <input type="text" name="text_input" placeholder="Type a message..."></input>
       <button> -->
-      <form>
+    <form>
+      <div class="field">
+        <div class="input-field">
+          <input class="input is-large" type="text" name="text_input" placeholder="Type Text To Be Analyzed...">
+          <button type="submit" class="button is-danger is-large">
+            <a class="submit-btn">Analyze</a>
+          </button>
+        </div>
+      </div>
+    </form>
+
+      <!-- <form>
         <label for="text"></label>
         <input type="text" id="input-group" name="text_input" placeholder="Type Text To Be Analyzed...">
 
         <input type="submit" value="Analyze">
         <h3>😀 😆 😢</h3>
-      </form>
+      </form> -->
     </div>
     <script src="src/index.js" charset="utf-8"></script>
 
