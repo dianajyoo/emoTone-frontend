@@ -33,7 +33,10 @@
       <form>
         <div class="field">
           <div class="input-field">
-            <input class="input is-large" type="text" name="text_input" placeholder="Type Text To Be Analyzed...">
+            <input class="input is-large is-info" type="text" value="" name="text_input" placeholder="Type Text To Be Analyzed...">
+            <button class="button is-danger is-large">
+              <a class="rec-btn">REC</a>
+            </button>
             <button type="submit" class="button is-danger is-large">
               <a class="submit-btn">Analyze</a>
             </button>
@@ -41,6 +44,8 @@
         </div>
       </form>
     </div>
+
+    <audio class="sound" src="audio/chime.mp3"></audio> <!-- sound to be played when we click icon -->
 
     <div class="row" style="display: none;">
       <div class="column">

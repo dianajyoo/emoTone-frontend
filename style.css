@@ -3,6 +3,17 @@ body, html {
   height: 100%;
 }
 
+h3 {
+  text-align: center;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
 .bg {
   background-image: url('img/background.jpg');
   height: 80%;
@@ -92,24 +103,17 @@ figcaption {
   font-weight: bold;
 }
 
-h3 {
-  text-align: center;
-}
-
-div {
-    border-radius: 5px;
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* button styling */
+/* button text styling */
 .submit-btn {
   color: #fff
 }
 
 .start {
   color: rgb(255, 0, 83);
+}
+
+.rec-btn {
+  color: #fff
 }
 
 /* animation on hover */

@@ -1,8 +1,39 @@
 const INPUT_URL = "http://localhost:3000/text_inputs"
+
 const figcaption = document.querySelectorAll('figcaption')
 var inputDisplayContent = document.querySelector('.input-group')
 var emojiDisplayContent = document.querySelector('.row')
+const recButton = document.querySelector('.rec-btn')
+var inputField = document.querySelector('input')
 let text
+
+window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+
+const recognition = new SpeechRecognition();
+
+let paragraph = document.createElement('p');
+let container = document.querySelector('.input');
+container.appendChild(paragraph);
+const sound = document.querySelector('.sound');
+
+recButton.addEventListener('click', () => {
+  sound.play();
+  dictate();
+
+  // inputField.value = paragraph.innerHTML
+  inputField.value = speechToText
+  debugger
+});
+
+const dictate = () => {
+recognition.start();
+recognition.onresult = (event) => {
+  // this is the transcript
+  var speechToText = event.results[0][0].transcript;
+
+  // paragraph.textContent = speechToText;
+}
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 
