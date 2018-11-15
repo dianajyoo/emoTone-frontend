@@ -16,7 +16,7 @@ div {
 
 .bg {
   background-image: url('img/background.jpg');
-  height: 80%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,6 +114,12 @@ figcaption {
 
 .rec-btn {
   color: #fff
+}
+
+#rec {
+  background: transparent;
+  border: none;
+
 }
 
 /* animation on hover */

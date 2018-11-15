@@ -17,6 +17,7 @@
     <div class="description">
       <p>emoTone is a natural language processing program, a subfield of AI,</p>
       <p>that is concerned with interaction between computers and "natural" human speak.</p>
+      <p>Supports speech-to-text function in addition to inputting text manually.<p>
       <p>Detects the 7 most common tones in written text:<p>
       <p id="emotions">anger, fear, joy, sadness, confident, analytical & tentative</p>
     </div>
@@ -34,12 +35,13 @@
         <div class="field">
           <div class="input-field">
             <input class="input is-large is-info" type="text" name="text_input" placeholder="Type Text To Be Analyzed...">
-            <button class="button is-danger is-large">
+            <!-- <button class="button is-danger is-large">
               <a class="rec-btn">REC</a>
-            </button>
+            </button> -->
             <button type="submit" class="button is-danger is-large">
               <a class="submit-btn">Analyze</a>
             </button>
+            <button id="rec"><img src="img/microphone.png" width="40" height="40"></button>
           </div>
         </div>
       </form>

@@ -3,7 +3,7 @@ const INPUT_URL = "http://localhost:3000/text_inputs"
 const figcaption = document.querySelectorAll('figcaption')
 var inputDisplayContent = document.querySelector('.input-group')
 var emojiDisplayContent = document.querySelector('.row')
-const recButton = document.querySelector('.rec-btn')
+const recButton = document.querySelector('#rec')
 var inputField = document.querySelector('input')
 let text
 
@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.target.tagName === 'A') {
       inputDisplayContent.style.display = 'block'
       emojiDisplayContent.style.display = 'block'
+
+      // automatically scrolls down to view emoticons after clicking btn
+      emojiDisplayContent.scrollIntoView()
     }
   })
 
