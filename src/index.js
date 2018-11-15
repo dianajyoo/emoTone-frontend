@@ -11,28 +11,22 @@ window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecogn
 
 const recognition = new SpeechRecognition();
 
-let paragraph = document.createElement('p');
 let container = document.querySelector('.input');
-container.appendChild(paragraph);
 const sound = document.querySelector('.sound');
 
 recButton.addEventListener('click', () => {
   sound.play();
   dictate();
-
-  // inputField.value = paragraph.innerHTML
-  inputField.value = speechToText
-  debugger
 });
 
 const dictate = () => {
-recognition.start();
-recognition.onresult = (event) => {
-  // this is the transcript
-  var speechToText = event.results[0][0].transcript;
+  recognition.start();
+  recognition.onresult = (event) => {
+    // this is the transcript
+    var speechToText = event.results[0][0].transcript;
 
-  // paragraph.textContent = speechToText;
-}
+    inputField.value = speechToText
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     text = event.target[0].value
 
-    // debugger
     fetch(INPUT_URL, {
       method: 'POST',
       headers: {
