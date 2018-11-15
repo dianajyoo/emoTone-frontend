@@ -5,7 +5,7 @@ body, html {
 
 .bg {
   background-image: url('img/background.jpg');
-  height: 70%;
+  height: 80%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,6 +78,15 @@ figcaption {
   text-align: left;
 }
 
+.start-btn {
+  position: absolute;
+  bottom: 25%;
+  left: 38%;
+  background: transparent;
+  margin: 0;
+  color: white;
+}
+
 #emotions {
   color: rgb(255, 0, 83);
   font-weight: bold;
@@ -94,9 +103,13 @@ div {
     text-align: center;
 }
 
-/* Button */
+/* button styling */
 .submit-btn {
   color: #fff
+}
+
+.start {
+  color: rgb(255, 0, 83);
 }
 
 /* animation on hover */

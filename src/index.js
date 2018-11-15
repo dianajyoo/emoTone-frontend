@@ -1,11 +1,21 @@
 const INPUT_URL = "http://localhost:3000/text_inputs"
 const figcaption = document.querySelectorAll('figcaption')
+var inputDisplayContent = document.querySelector('.input-group')
+var emojiDisplayContent = document.querySelector('.row')
 let text
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  document.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+      inputDisplayContent.style.display = 'block'
+      emojiDisplayContent.style.display = 'block'
+    }
+  })
+
   document.addEventListener('submit', (event) => {
     event.preventDefault()
+
     text = event.target[0].value
 
     // debugger
@@ -43,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (inputObject.text === text) {
             for (let i = 0; i < 8; i++) {
               if (figcaption[i].id === inputObject.tone) {
-                figcaption[i].innerHTML += `${inputObject.tone} ${inputObject.score}%`
+                figcaption[i].innerHTML = `${inputObject.tone} ${inputObject.score}%`
               }
             }
           }
