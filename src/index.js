@@ -2,28 +2,30 @@ const INPUT_URL = "http://localhost:3000/text_inputs"
 
 const figcaption = document.querySelectorAll('figcaption')
 var inputDisplayContent = document.querySelector('.input-group')
-var emojiDisplayContent = document.querySelector('.row')
+var emoticons = document.querySelector('.row')
 const recButton = document.querySelector('#rec')
 var inputField = document.querySelector('input')
 let text
 
-window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+// converts speech to text and displays in form
+window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition
 
-const recognition = new SpeechRecognition();
+const recognition = new SpeechRecognition()
 
-let container = document.querySelector('.input');
-const sound = document.querySelector('.sound');
+let container = document.querySelector('.input')
+const sound = document.querySelector('.sound')
 
 recButton.addEventListener('click', () => {
-  sound.play();
-  dictate();
+  sound.play()
+  dictate()
 });
 
 const dictate = () => {
-  recognition.start();
+  recognition.start()
   recognition.onresult = (event) => {
+
     // this is the transcript
-    var speechToText = event.results[0][0].transcript;
+    var speechToText = event.results[0][0].transcript
 
     inputField.value = speechToText
   }
@@ -34,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {
     if (event.target.tagName === 'A') {
       inputDisplayContent.style.display = 'block'
-      emojiDisplayContent.style.display = 'block'
+      emoticons.style.display = 'block'
 
-      // automatically scrolls down to view emoticons after clicking btn
-      emojiDisplayContent.scrollIntoView()
+      // auto-scrolling to emoticons after btn click
+      emoticons.scrollIntoView()
     }
   })
 
@@ -66,13 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // clear figcaption content after new form is submitted
         for (let i = 0; i < 8; i++) {
-          if (figcaption[i].innerHTML !== "") {
-            json.forEach(inputObject => {
-              for (let i = 0; i < 8; i++) {
-                figcaption[i].innerHTML = ""
-              }
-            })
-          }
+          figcaption[i].innerHTML = ""
         }
 
         // add tone score based on input text
@@ -87,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         // reset the form field
-        // event.target.reset()
+        inputField.value = ""
 
       })
     })
