@@ -67,7 +67,7 @@ figcaption {
 .emotone {
   position: absolute;
   bottom: 3em;
-  left: 15%;
+  left: 1em;
   background: transparent;
   margin: 0;
   font-family: "moderna";
@@ -79,7 +79,7 @@ figcaption {
 .description {
   position: absolute;
   bottom: 10em;
-  left: 13em;
+  left: 11em;
   background: transparent;
   margin: 0;
   font-family: "LogicoSansRegular";
@@ -92,7 +92,7 @@ figcaption {
 .start-btn {
   position: absolute;
   bottom: 5em;
-  left: 34em;
+  left: 32em;
   background: transparent;
   margin: 0;
   color: white;
