@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch(INPUT_URL)
       .then(res => res.json())
       .then(json => {
-        console.log(json)
 
         // clear figcaption content after new form is submitted
         for (let i = 0; i < 8; i++) {
